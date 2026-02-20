@@ -1,0 +1,91 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      min-width: 350px;
+}
+
+h1 {
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 28px;
+}
+
+#numero {
+      font-size: 72px;
+      font-weight: bold;
+      margin: 30px 0;
+      transition: all 0.3s ease;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.botoes {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+}
+
+button {
+      flex: 1;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: white;
+}
+
+#mais {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#menos {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+#reset {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      width: 100%;
+}
+
+button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+      transform: translateY(0);
+}
+
+
+.info {
+      margin-top: 20px;
+      padding: 15px;
+      background: #d3d2d2;
+      border-radius: 10px;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      color: #9792a9;
+}
