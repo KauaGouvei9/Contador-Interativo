@@ -52,7 +52,7 @@ git clone https://github.com/SEU-USUARIO/contador-interativo.git
 
 3. Interaja com os botões!
 
-4. Use o github
+4. Use o githubpages no repositorio ou acesse clique https://kauagouvei9.github.io/Contador-Interativo/ 
 
 ## 🧠 Aprendizados
 
