@@ -89,3 +89,57 @@ button:active {
       font-size: 14px;
       color: #9792a9;
 }
+
+/* Controle customizado */
+.controle-custom {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.controle-custom label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.controle-custom input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.controle-custom input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Botões extras */
+.botoes-extras {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+#multiplicar {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+#dividir {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+}
+
+/* Ajuste do info */
+.info small {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999;
+}

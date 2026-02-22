@@ -15,15 +15,30 @@
     
     <div id="numero">0</div>
     
+    <!-- Controle customizado -->
+    <div class="controle-custom">
+      <label for="passo">Aumentar/diminuir de:</label>
+      <input type="number" id="passo" value="1" min="1" max="50">
+    </div>
+    
+    <!-- Botões principais -->
     <div class="botoes">
       <button id="mais">+</button>
       <button id="menos">-</button>
+    </div>
+    
+    <!-- Botões extras -->
+    <div class="botoes-extras">
+      <button id="multiplicar">x2</button>
+      <button id="dividir">÷2</button>
     </div>
     
     <button id="reset">Reset</button>
     
     <div class="info">
       Positivo = Verde | Negativo = Vermelho | Zero = Preto
+      <br>
+      <small>Limites: -999 a 999</small>
     </div>
   </div>
 
