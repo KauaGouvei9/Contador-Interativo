@@ -11,6 +11,9 @@ Um contador interativo desenvolvido com HTML, CSS e JavaScript puro, criado dura
 - ➕ Incrementar contador
 - ➖ Decrementar contador
 - 🔄 Resetar para zero
+- ✖️ Multiplica o contador por 2
+- ➗ Divide o contador por 2
+- ☯️ Aumenta/Diminui de um valor selecionado
 - 🎨 Mudança de cor dinâmica:
   - **Verde** quando positivo
   - **Vermelho** quando negativo
