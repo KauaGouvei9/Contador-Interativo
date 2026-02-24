@@ -21,9 +21,29 @@ const btnMultiplicar = document.querySelector('#multiplicar')
 // seleciona o botao 'divide'
 const btnDividir = document.querySelector('#dividir')
 
+
+function validarInput(input, min, max, padrao){
+    let valor = Number(input.value);
+
+    if(!valor || valor < min){
+        input.value = padrao;
+    }
+
+    if(valor > max){
+        input.value = max;
+    }
+}
+
+
+
+function aplicarLimites(valor) {
+    if(valor > 999) return 999;
+    if(valor < -999) return -999;
+    return valor;
+}
+
 function atualizarTela(valor){
-    if(valor > 999) valor = 999;
-    if(valor < -999) valor = -999;
+    valor = aplicarLimites(valor);
     
     numero.textContent = valor;
     if(valor < 0){
@@ -39,15 +59,20 @@ function atualizarTela(valor){
 }
 
 
-/**
+/*
  * Programa Principal
  */
 
 let contador = 0;
 atualizarTela(contador);
 
-// Funcionalidade dos botoes
+// Validação do input de passo
+controlePasso.addEventListener('blur', () => {
+    validarInput(controlePasso, 1, 999, 1);
+});
 
+
+// Funcionalidade dos botoes
 btnMais.addEventListener('click', () => {
     const valorPasso = Number(controlePasso.value);
     contador += valorPasso;
