@@ -27,6 +27,7 @@ function validarInput(input, min, max, padrao){
 
     if(!valor || valor < min){
         input.value = padrao;
+        return;
     }
 
     if(valor > max){
