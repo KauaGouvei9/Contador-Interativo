@@ -12,18 +12,30 @@ const btnMenos = document.querySelector('#menos');
 // seleciona o botao reset
 const btnReset = document.querySelector('#reset');
 
-function atualizarTela(contador){
-    numero.textContent = contador;
-    if(contador < 0){
+// seleciona o passo do controle 
+const controlePasso = document.querySelector('#passo');
+
+//seleciona o botao 'multiplica'
+const btnMultiplicar = document.querySelector('#multiplicar')
+
+// seleciona o botao 'divide'
+const btnDividir = document.querySelector('#dividir')
+
+function atualizarTela(valor){
+    if(valor > 999) valor = 999;
+    if(valor < -999) valor = -999;
+    
+    numero.textContent = valor;
+    if(valor < 0){
         numero.style.color = 'red';
     }
-    else if(contador > 0){
+    else if(valor > 0){
         numero.style.color = 'green'
     }
     else{
         numero.style.color = 'black'
     }
-        
+    return valor;
 }
 
 
@@ -37,17 +49,29 @@ atualizarTela(contador);
 // Funcionalidade dos botoes
 
 btnMais.addEventListener('click', () => {
-    contador++;
-    atualizarTela(contador)
+    const valorPasso = Number(controlePasso.value);
+    contador += valorPasso;
+    contador = atualizarTela(contador);
 })
 
 btnMenos.addEventListener('click', () => {
-    contador--;
-    atualizarTela(contador)
+    const valorPasso = Number(controlePasso.value);
+    contador -= valorPasso;
+    contador = atualizarTela(contador);
+})
+
+btnMultiplicar.addEventListener('click', () => {
+    contador *= 2;
+    contador = atualizarTela(contador);
+})
+
+btnDividir.addEventListener('click', () => {
+    contador = Math.trunc(contador / 2);
+    contador = atualizarTela(contador);
 })
 
 btnReset.addEventListener('click', () => {
     contador = 0;
-    atualizarTela(contador)
+    atualizarTela(contador);
 })
 
